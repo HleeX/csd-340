@@ -1,0 +1,113 @@
+#header {
+	background-color: #e3c9ba;
+	text-align: center;
+	color: white;
+	padding: 20px;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+#nav {
+	overflow: hidden;
+	background-color: #deb9a4;
+	border-bottom: 15px solid #b39482;
+	
+}
+
+#nav a {
+	float: left;
+	display: block;
+	background-color: #deb9a4;
+	color: white;
+	text-align: center;
+	padding: 14px 16 px;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	background-color: #white;
+	color: #fff;
+}
+
+#container {
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	bottom: 100px;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s;
+	width: 50%;
+	margin-bottom: 20px; 
+	background-color: #fff;
+}
+
+.card-title {
+	text-align: center; 
+   	font-size: 2em; 
+    	color: #333; 
+    	font-weight: 400; 
+}
+.card-content {
+   	padding: 2px 16px; 
+}
+
+.card:hover {
+   	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
+}
+footer {
+   	background-color: #e3c9ba; 
+   	position: fixed; 
+    	bottom: 0; 
+	left: 0;
+    	width: 100%; 
+	text-align: left:	
+	padding:10px;
+
+}
+
+footer p {
+    	color: white; 
+    	font-weight: 400; 
+   	padding-right: 10px; 
+    	font-style: italic; 
+}
+
+footer a {
+    	color: #333; 
+    	font-weight: 400; 
+    	padding-right: 10px;
+    	font-style: italic; 
+	float: right; 
+}
+
+footer a:hover {
+    	text-decoration: underline; 
+}
+
+/* Table Styles */
+
+table, th, td {
+	border: 1px solid;
+}
+
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
