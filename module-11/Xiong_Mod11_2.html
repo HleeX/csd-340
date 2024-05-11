@@ -1,0 +1,49 @@
+<!-- Hlee Xiong: Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="module 2 assignment 2.2" />
+    <meta name="keywords" content="html. css. introduction." />
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="expires" content="Fri, 04 Apr 2025 23:59:59 GMT" />
+
+	
+</head>
+<body>
+    
+        <h1>Assignment Assignment 11.2: JavaScript - Part 3</h1>
+
+	<input type="text" id="entryInput">
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <script>
+        let entries = [];
+
+        function addEntry() {
+            let entry = document.getElementById("entryInput").value;
+            entries.push(entry);
+            alert("Entry '" + entry + "' added at position " + entries.length);
+        }
+
+        function deleteLastEntry() {
+            if (entries.length === 0) {
+                alert("No entries to delete.");
+            } else {
+                let deletedEntry = entries.pop();
+                alert("Entry '" + deletedEntry + "' deleted from position " + (entries.length + 1));
+            }
+        }
+
+        function displayEntries() {
+            let displayString = "";
+            for (let i = 0; i < entries.length; i++) {
+                displayString += (i + 1) + ". " + entries[i] + "\n";
+            }
+            alert("Entries:\n" + displayString);
+        }
+    </script>
+</body>
+</html>
