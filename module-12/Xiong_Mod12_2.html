@@ -1,0 +1,91 @@
+<!-- Hlee Xiong: Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="Xiong_Mod12_2.css" type="text/css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: Java Script Part 4</h1>
+
+        <div id="one">
+            <h3>Top 10 Favorite Books</h3>
+
+            <ol id="book-list">
+                <li>The Assassin's Blade</li>
+                <li>Throne of Glass</li>
+                <li>Crown of Midnight</li>
+                <li>Heir of Fire</li>
+                <li>Queen of Shadows</li>
+                <li>Empire of Storms</li>
+                <li>Tower of Dawn</li>
+                <li>Kingdom of Ash</li>
+                <li>Daughter of the Moon Goddess</li>
+                <li>Heart of the Sun Warrior</li>
+            </ol>
+            <button onclick="sortTopToBottom()">Top to Bottom</button>
+            <button onclick="sortBottomToTop()">Bottom to Top</button>
+        </div>
+
+        <div id="two">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>github-pages</li>
+                <li>CSS</li>
+                <li>Text Editor</li>
+                <li>color theory</li>
+            </ul>
+        </div>
+
+        <div id="bottom">
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+
+    </div>
+
+    <script>
+        const books = [
+            "The Assassin's Blade",
+            "Throne of Glass",
+            "Crown of Midnight",
+            "Heir of Fire",
+            "Queen of Shadows",
+            "Empire of Storms",
+            "Tower of Dawn",
+            "Kingdom of Ash",
+            "Daughter of the Moon Goddess",
+            "Heart of the Sun Warrior"
+        ];
+
+        function sortTopToBottom() {
+            const bookList = document.getElementById('book-list');
+            bookList.innerHTML = '';
+            books.sort();
+            books.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = book;
+                bookList.appendChild(li);
+            });
+        }
+
+        function sortBottomToTop() {
+            const bookList = document.getElementById('book-list');
+            bookList.innerHTML = '';
+            books.sort().reverse();
+            books.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = book;
+                bookList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+
+</html>
